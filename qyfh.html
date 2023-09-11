@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>曲院风荷</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,7 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
 		
 		.menu {
 		  width: 25%;
@@ -105,7 +107,7 @@
 			padding: 5px 10px;
 		}
 		.qyfh h2{
-			text-align:center;
+			text-align: center;
 		}
 		.fh{
 			width: 25%;
@@ -143,6 +145,37 @@
 			float: right;
 			margin-left: 10px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #989998;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #949594;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 		<div class="container">
@@ -276,6 +309,22 @@
 				<p>原来是这样：根据史料记载：在西湖西北隅，濒岳湖、西里湖，与苏堤遥遥相望。曲(曲)院，原系南宋年间设在行春(即洪春桥)酿制官酒的作坊，坊置约在金沙涧
 				汇人西湖处。明《西湖游览志》卷十：“曲院，宋时取金沙涧之水造麴，以酿官酒。其地多荷花，世称‘曲院风荷’是也。”宋亡，曲院荒湮，景也不存。清雍正
 				《西湖志》卷三：“国朝康熙三十八年，构亭于跨虹桥之北，引流叠石为盘曲之势。圣祖仁皇帝亲洒宸翰，改‘曲院’为‘曲院’。“荷风”为“风荷”恭制匾额，奉悬亭楣。</p>
+			<div class="pagination">
+			    <a href="https://lwenxue.github.io/west_sdcx/sdcx.html" class="prev">
+					<!-- 上一页按钮 -->
+				  <button class="button" onclick="goToPreviousPage()">
+					<i class="arrow fas fa-chevron-left"></i>
+					上一页
+				  </button>
+				</a>
+			    <a href="https://lwenxue.github.io/west_sfcy/sfcy.html" class="next">
+					<!-- 下一页按钮 -->
+					<button class="button" onclick="goToNextPage()">
+										下一页
+					<i class="arrow fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
 			</div>
 	</body>
 	<script>
